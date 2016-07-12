@@ -61,7 +61,7 @@ class SelectMultipleFormField(fields.MultipleChoiceField):
                 # must be iterable
                 it = iter(self.empty_value)
                 return self.empty_value
-            except TypeError, te:
+            except TypeError:
                 return []
 
         if isinstance(value, six.string_types):
